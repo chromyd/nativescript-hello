@@ -11,10 +11,20 @@ import { Component } from "@angular/core";
       from { transform: rotate(0); } to { transform: rotate(360); }
     }
     Image {
-      animation-name: spin; animation-duration: 3s;
+      animation-name: spin;
+      animation-duration: 10s;
       animation-iteration-count: infinite;
-      animation-timing-function: linear;
     }
   `]
 })
-export class AppComponent {}
+export class AppComponent {
+    constructor() {
+        console.log("Hello World has been constructed!");
+        console.log(JSON.stringify(
+            {
+                "name": "Jana",
+                "breastSize": "D"
+            }
+        ));
+    }
+}
